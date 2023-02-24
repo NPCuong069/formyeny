@@ -1,0 +1,467 @@
+<!-- <head>
+    <title>Send a Love Letter!</title>
+</head>
+<script>
+    $(document).ready(function () {
+        $('.container').mouseenter(function () {
+            $('.card').stop().animate({
+                top: '-90px'
+            }, 'slow');
+        }).mouseleave(function () {
+            $('.card').stop().animate({
+                top: 0
+            }, 'slow');
+        });
+    });
+</script>
+<body>
+    <div id="canvas" class="wrap">
+        <h1>Thư tình nà</h1>
+        <div class="postcard">
+            <div class="letter">
+                <form action="#" method="post" class="message_form">
+                    <p class="push">Gửi </p><input type="text" id="recipient" name="recipient_name"
+                        placeholder="Bé ny anh yêu ơi là yêu" class="push">
+                    <p> ,</p><br>
+                    <label for="message">Message</label><br>
+                    <textarea id="message" name="message_to_recipient"
+                        placeholder="Chưa biết viết j luôn ó" readonly></textarea><br>
+                    <p>Người yêu em chắc chỉ sau tía má,</p><br>
+                    <input type="text" id="sender_name" name="sender" placeholder="Bun của bé">
+                </form>
+            </div>
+
+            <div class="address">
+                <img src="http://i44.photobucket.com/albums/f9/dandee114/stamp_zpsvbuxiwih.png" class="mail_stamp">
+                <form action="#" method="post" class="message_form">
+                    <input type="email" id="recipient_email" name="recipient_email" placeholder="Gửi đến em">
+                </form>
+                    <p id="address">Nhà số 1<br>
+                        Đường vô tim Bun,<br>
+                        
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="valentines">
+            <div class="envelope"></div>
+            <div class="front"></div>
+            <div class="card">
+                <div class="text">Bun</br> Yêu</br> Bé!!!</div>
+                <div class="heart" </div>
+                </div>
+                <div class="hearts">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                    <div class="four"></div>
+                    <div class="five"></div>
+                </div>
+                <div class="shadow"></div>
+            </div>
+
+</body>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Varela Round', 'Quicksand', sans-serif;
+        background-color: #800020;
+    }
+
+    .postcard {
+        width: 800px;
+        height: 500px;
+        background-color: #f7f7f7;
+        margin: 0 auto;
+        border-radius: 2%;
+        display: flex;
+        justify-content: space-between;
+        padding: 3em;
+        box-shadow: .8em .8em 15px rgba(0, 0, 0, .3);
+        -ms-transform: rotate(2.5deg);
+        /* IE 9 */
+        -webkit-transform: rotate(2.5deg);
+        /* Chrome, Safari, Opera */
+        transform: rotate(2.5deg);
+        -moz-transition: all .5s ease;
+        -webkit-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 5em;
+        color: #f7f7f7;
+        margin-bottom: -15px;
+    }
+
+    p {
+        display: inline;
+        font-size: 1.3em;
+    }
+
+    /*animation*/
+    .postcard:hover,
+    .postcard:active,
+    .postcard:focus {
+        -ms-transform: rotate(0deg);
+        /* IE 9 */
+        -webkit-transform: rotate(0deg);
+        /* Chrome, Safari, Opera */
+        transform: rotate(0deg);
+        -moz-transition: all .5s ease;
+        -webkit-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease;
+
+
+    }
+
+    /*form*/
+    input,
+    textarea {
+        border: none;
+        border-radius: 4%;
+        height: 1.9em;
+        padding: .7em;
+        font-size: 1.3em;
+        font-family: 'Varela Round', 'Quicksand', sans-serif;
+    }
+
+    input:focus,
+    textarea:focus {
+        outline-color: pink;
+    }
+
+    .mail_stamp {
+        width: 100px;
+        float: right;
+    }
+
+    #address {
+        text-decoration: underline;
+    }
+
+    textarea {
+        overflow: auto;
+        resize: none;
+        height: 10em;
+        width: 17em;
+        margin-top: .5em;
+        margin-bottom: 1em;
+    }
+
+    .push {
+        margin-bottom: 1em;
+        margin-top: .5em;
+    }
+
+    #recipient_email {
+        margin-top: 4.5em;
+        margin-bottom: 1.5em;
+    }
+
+    /*footer*/
+    footer {
+        margin: 2em auto;
+        text-align: center;
+        font-family: 'Varela Round', 'Quicksand', sans-serif;
+        color: white;
+    }
+
+    footer p {
+        font-size: 1em;
+        letter-spacing: 1px;
+    }
+
+    .container {
+        position: relative;
+    }
+
+    .valentines {
+        position: relative;
+        top: 50px;
+        cursor: pointer;
+        animation: up 3s linear infinite;
+    }
+
+    @keyframes up {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-30px);
+        }
+    }
+
+
+    .envelope {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        background-color: #f08080;
+    }
+
+    .envelope:before {
+        background-color: #f08080;
+        content: "";
+        position: absolute;
+        width: 212px;
+        height: 212px;
+        transform: rotate(45deg);
+        top: -105px;
+        left: 44px;
+        border-radius: 30px 0 0 0;
+    }
+
+    .card {
+        position: absolute;
+        background-color: #eae2b7;
+        width: 270px;
+        height: 170px;
+        top: 5px;
+        left: 15px;
+        box-shadow: -5px -5px 100px rgba(0, 0, 0, 0.4);
+    }
+
+    .card:before {
+        content: "";
+        position: absolute;
+        border: 3px solid #003049;
+        border-style: dotted;
+        width: 240px;
+        heighT: 140px;
+        left: 12px;
+        top: 12px;
+    }
+
+    .text {
+        position: absolute;
+        font-family: 'Brush Script MT', cursive;
+        font-size: 28px;
+        text-align: center;
+        line-height: 25px;
+        top: 19px;
+        left: 85px;
+        color: #003049;
+    }
+
+    .heart {
+        background-color: #d62828;
+        display: inline-block;
+        height: 30px;
+        margin: 0 10px;
+        position: relative;
+        top: 110px;
+        left: 105px;
+        transform: rotate(-45deg);
+        width: 30px;
+    }
+
+    .heart:before,
+    .heart:after {
+        content: "";
+        background-color: #d62828;
+        border-radius: 50%;
+        height: 30px;
+        position: absolute;
+        width: 30px;
+    }
+
+    .heart:before {
+        top: -15px;
+        left: 0;
+    }
+
+    .heart:after {
+        left: 15px;
+        top: 0;
+    }
+
+    .hearts {
+        position: absolute
+    }
+
+    .one,
+    .two,
+    .three,
+    .four,
+    .five {
+        background-color: red;
+        display: inline-block;
+        height: 10px;
+        margin: 0 10px;
+        position: relative;
+        transform: rotate(-45deg);
+        width: 10px;
+        top: 50px;
+    }
+
+    .one:before,
+    .one:after,
+    .two:before,
+    .two:after,
+    .three:before,
+    .three:after,
+    .four:before,
+    .four:after,
+    .five:before,
+    .five:after {
+        content: "";
+        background-color: red;
+        border-radius: 50%;
+        height: 10px;
+        position: absolute;
+        width: 10px;
+    }
+
+    .one:before,
+    .two:before,
+    .three:before,
+    .four:before,
+    .five:before {
+        top: -5px;
+        left: 0;
+    }
+
+    .one:after,
+    .two:after,
+    .three:after,
+    .four:after,
+    .five:after {
+        left: 5px;
+        top: 0;
+    }
+
+    .one {
+        left: 10px;
+        animation: heart 1s ease-out infinite;
+    }
+
+    .two {
+        left: 30px;
+        animation: heart 2s ease-out infinite;
+    }
+
+    .three {
+        left: 50px;
+        animation: heart 1.5s ease-out infinite;
+    }
+
+    .four {
+        left: 70px;
+        animation: heart 2.3s ease-out infinite;
+    }
+
+    .five {
+        left: 90px;
+        animation: heart 1.7s ease-out infinite;
+    }
+
+    @keyframes heart {
+        0% {
+            transform: translateY(0) rotate(-45deg) scale(0.3);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(-150px) rotate(-45deg) scale(1.3);
+            opacity: 0.5;
+        }
+    }
+
+    .front {
+        position: absolute;
+        border-right: 180px solid #f4978e;
+        border-top: 95px solid transparent;
+        border-bottom: 100px solid transparent;
+        left: 120px;
+        top: 5px;
+        width: 0;
+        height: 0;
+        z-index: 10;
+    }
+
+    .front:before {
+        position: absolute;
+        content: "";
+        border-left: 300px solid #f8ad9d;
+        border-top: 195px solid transparent;
+        left: -120px;
+        top: -95px;
+        width: 0;
+        height: 0;
+    }
+
+    .shadow {
+        position: absolute;
+        width: 330px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.3);
+        top: 265px;
+        left: -15px;
+        animation: scale 3s linear infinite;
+        z-index: -1;
+    }
+
+    @keyframes scale {
+
+        0%,
+        100% {
+            transform: scaleX(1);
+        }
+
+        50% {
+            transform: scaleX(0.85);
+        }
+    }
+</style> -->
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Nanum+Pen+Script|Pinyon+Script|Fuzzy+Bubbles" rel="stylesheet">
+
+<div class="aletter">
+  <div class="tomy">Gửi eny của Bun,</div><br>
+  À thì như bao project, demo lúc nào cũng hoành tráng còn product thì toàn tệ ntn, mà, anh đang bí content ớ, nên trừ nói yêu bé ra thì tạm thời chưa biết viết gì luôn, 
+  bé chịu khó chờ đến lúc Bun nghĩ ra content nha, hic hic T^T<br>
+<br><br>
+  <div class="tomy" style="text-indent: 90px;">Yêu bé nhất quả đất, Bun</div>
+</div>
+<style>
+    .aletter {
+  width: 250px;
+  height: auto;
+  border: 1px solid grey;
+  margin: 0 auto;
+  padding: 50px;
+  font-family: 'Nanum Pen Script';
+  font-size: 20px;
+  color: #000030;
+  line-height: 20px;
+  text-align: justify;
+  background-image: url(http://www.publicdomainpictures.net/pictures/40000/velka/paper-texture-1359509235aJV.jpg);
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fae1dd;
+}
+.tomy {
+  width: 190px;
+  height: 20px;
+  color: #000030;
+  font-family: 'Fuzzy Bubbles';
+  font-size: 20px;
+  transform: rotate(-5deg);
+}
+</style>
